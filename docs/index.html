@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="favicon.png"/>
     <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/fancybox.css"/>
-    <link rel="stylesheet" href="./css/style.css?v=2"/>
+    <link rel="stylesheet" href="./css/style.css?v=3"/>
   </head>
   <body>
     <header class="header">
@@ -629,7 +629,7 @@
               </div>
               <div class="footer__socs"><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-vk.svg" alt="VK"/></a><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-yt.svg" alt="YouTube"/></a><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-tg.svg" alt="Telegram"/></a><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-wa.svg" alt="WhatsApp"/></a></div>
             </div>
-            <div class="footer__links-other"><a href="#">Лицензия</a><a href="#">Политика конфиденциальности</a></div>
+            <div class="footer__links-other"><a data-modal-open="politic">Лицензия</a><a data-modal-open="politic">Политика конфиденциальности</a></div>
           </div>
         </div>
       </div>
@@ -693,9 +693,21 @@
         </div>
       </div>
     </div>
+    <div class="modal-politic modal-wrapper" data-modal-block="politic">
+      <div class="modal-content">
+        <button class="x-btn" title="Close (Esc)" type="button" data-modal-close="politic"> <img src="./img/x-icon.svg" alt=""/></button>
+        <div class="modal-content__main">
+          <h3 class="modal__title">Политика конфиденциальности</h3>
+          <div class="modal__text">
+            <p>Имеется спорная точка зрения, гласящая примерно следующее: диаграммы связей, вне зависимости от их уровня, должны быть объединены в целые кластеры себе подобных. В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей являются только методом политического участия и превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Лишь диаграммы связей рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
+            <p>Имеется спорная точка зрения, гласящая примерно следующее: диаграммы связей, вне зависимости от их уровня, должны быть объединены в целые кластеры себе подобных. В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей являются только методом политического участия и превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Лишь диаграммы связей рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/fancybox.umd.js"></script>
     <script src="./js/imask.js"></script>
-    <script src="./js/main.js?v=2"></script>
+    <script src="./js/main.js?v=3"></script>
   </body>
 </html>
