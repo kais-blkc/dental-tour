@@ -1758,6 +1758,10 @@ body {
   z-index: 3;
 }
 
+.sec-videos .swiper-nav-center {
+  z-index: 1;
+}
+
 .sec-videos__item {
   width: 100%;
   display: block;
