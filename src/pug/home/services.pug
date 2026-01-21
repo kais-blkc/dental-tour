@@ -1,0 +1,56 @@
+mixin tab(id, title, active = false)
+  button.btn.btn-green.btn-tab(data-tab-btn class=active ? 'is-active' : '' data-target=id)= title
+
+
+section#services.sec-services.sec-p-y
+  .container 
+    .h2 Услуги клиники
+
+    .sec-services__tabs(data-tabs)
+      .sec-services__tabs-nav
+        +tab('tab-1', 'Стоматология. Ортопедическое лечение', true)
+        +tab('tab-2', 'Протезирование')
+        +tab('tab-3', 'Имплантация')
+        +tab('tab-4', 'Терапия и традиционная китайская медицина')
+
+      .tabs__content(data-tabs-content)
+        each val in ['tab-1', 'tab-2', 'tab-3', 'tab-4'] 
+          - const isActiveClass = val === 'tab-1' ? 'is-active' : '';
+          div(data-tab-pane id=val class=isActiveClass)
+            .sec-services__item
+              .sec-services__item-wrap
+                .sec-services__item-slider 
+                  .swiper
+                    .swiper-wrapper
+                      .swiper-slide
+                        img(src="./img/services-1.jpg")
+                      .swiper-slide
+                        img(src="./img/services-1.jpg")
+                      .swiper-slide
+                        img(src="./img/services-1.jpg")
+
+                  .swiper-pagination
+                  .sec-services__item-slider-nav
+                    .slider-button-prev
+                    .slider-button-next
+
+                .sec-services__item-content
+                  .sec-services__item-title Стоматология. Ортопедическое лечение 
+                  .sec-services__item-list
+                    .sec-services__item-list-item
+                      p Металлокерамическая коронка #[br] на основе титана (пр-во Китай)
+                      span 5 600 ₽
+                    .sec-services__item-list-item
+                      p Металлокерамическая коронка на основе титана (пр-во Япония)
+                      span 6 800 ₽
+                    .sec-services__item-list-item
+                      p Металлокерамическая коронка на основе титана (пр-во Германия)
+                      span 8 500 ₽
+                    .sec-services__item-list-item
+                      p Коронка на основе диоксида циркония (пр-во Япония)
+                      span 12 000 ₽
+                    .sec-services__item-list-item
+                      p Коронка на основе диоксида циркония (пр-во Германия)
+                      span 15 000 ₽
+                  button.btn.btn-green.w-100p(data-modal-open="form-request") Рассчитать стоимость
+

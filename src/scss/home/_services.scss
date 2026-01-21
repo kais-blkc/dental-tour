@@ -1,0 +1,117 @@
+@use "../parts/variables" as v;
+
+.sec-services {
+  &__tabs {
+    margin-top: 40px;
+
+    .btn-tab {
+      background: var(--app-white);
+      color: var(--app-black);
+
+      @media (max-width: v.$screen-lg) {
+        font-size: 14px;
+        padding: 16px 13px;
+      }
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--app-green), transparent 90%);
+      }
+
+      &.is-active {
+        background-color: var(--app-green);
+        color: #fff;
+      }
+    }
+
+    &-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    &-wrap {
+      display: grid;
+      grid-template-columns: 35% 1fr;
+      gap: 60px;
+
+      @media (max-width: v.$screen-lg) {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+
+    &-slider {
+      overflow: hidden;
+      position: relative;
+
+      .swiper-slide img {
+        border-radius: 30px;
+        margin: 0 auto;
+      }
+
+      &-nav {
+        position: absolute;
+        display: flex;
+        width: 94%;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &-content {
+      @media (max-width: v.$screen-lg) {
+        padding: 34px 20px;
+        background: var(--app-gray-bg);
+        border-radius: var(--app-border-radius);
+        margin-top: -40px;
+        z-index: 3;
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: 700;
+
+      @media (max-width: v.$screen-lg) {
+        font-size: 18px;
+      }
+    }
+
+    &-list {
+      margin-top: 40px;
+
+      @media (max-width: v.$screen-lg) {
+        margin-top: 30px;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #cbcbcb;
+        font-weight: 500;
+        margin-bottom: 25px;
+
+        @media (max-width: v.$screen-lg) {
+          font-size: 14px;
+        }
+
+        span {
+          font-weight: 700;
+          color: var(--app-green);
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}

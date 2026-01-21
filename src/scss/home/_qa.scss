@@ -1,0 +1,73 @@
+@use "../parts/variables" as v;
+
+.sec-qa {
+  .accordion {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 24px;
+    align-items: start;
+
+    @media (max-width: v.$screen-lg) {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      border: 1px solid var(--app-green);
+      border-radius: var(--app-border-radius);
+      background: var(--app-gray-bg);
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: color-mix(in srgb, var(--app-green), transparent 90%);
+      }
+
+      &.is-open {
+        .accordion__header {
+          &::after {
+            transform: rotate(45deg);
+          }
+        }
+
+        .accordion__content {
+          padding-bottom: 16px;
+        }
+      }
+    }
+
+    &__header {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 500;
+      gap: 12px;
+      padding: 16px 30px;
+
+      @media (max-width: v.$screen-lg) {
+        font-size: 14px;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url("../img/accordion-btn.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: all 0.1s ease;
+        flex-shrink: 0;
+      }
+    }
+
+    &__content {
+      padding: 0 30px;
+    }
+
+    .btn {
+      margin-top: 10px;
+    }
+  }
+}

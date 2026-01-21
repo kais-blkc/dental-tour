@@ -1,0 +1,73 @@
+header.header
+  .container
+    .header-content
+      a(href="/").header-logo
+        img(src="./img/header-logo.svg", alt="")
+
+      .header-navbar.d-none-max-tablet
+        a(href="#banner") Главная
+        a(href="#about") О нас
+        a(href="#services") Прайс
+        a(href="#qa") Вопросы
+        a(href="#contacts") Контакты
+
+      .header-contacts.d-none-max-tablet
+        .header-contacts__icon
+          img(src="./img/phone-icon.svg" alt="Телефон")
+        .header-contacts__content
+          span.header-contacts__label Наш телефон
+          a.header-contacts__link(href="tel:+78005553535") +7 (800) 555 35 35
+
+      .header-socs.d-none-max-tablet
+        span.header-socs__title Наши соцсети
+        .header-socs__list
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-vk.svg" alt="VK")
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-yt.svg" alt="YouTube")
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-tg.svg" alt="Telegram")
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-wa.svg" alt="WhatsApp")
+              
+
+      button.header-btn.btn.btn-green.d-none-max-tablet(data-modal-open="form-request") Оставить заявку
+
+      .header-burger.d-none-min-tablet(data-modal-open="header-mobile")
+        img(src="./img/burger-menu.svg", alt="")
+
+
+  .header-mobile(data-modal-block="header-mobile")
+    .header-mobile__content
+      .header-mobile__close(data-modal-close="header-mobile")
+        img(src="img/x-icon.svg", alt="")
+
+      .header-navbar
+        a(href="#banner" data-modal-close="header-mobile") Главная
+        a(href="#about" data-modal-close="header-mobile") О нас
+        a(href="#services" data-modal-close="header-mobile") Прайс
+        a(href="#qa" data-modal-close="header-mobile") Вопросы
+        a(href="#contacts" data-modal-close="header-mobile") Контакты
+
+      .header-contacts
+        .header-contacts__icon
+          img(src="./img/phone-icon.svg" alt="Телефон")
+        .header-contacts__content
+          span.header-contacts__label Наш телефон
+          a.header-contacts__link(href="tel:+78005553535") +7 (800) 555 35 35
+
+      .header-socs
+        span.header-socs__title Наши соцсети
+        .header-socs__list
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-vk.svg" alt="VK")
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-yt.svg" alt="YouTube")
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-tg.svg" alt="Telegram")
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-wa.svg" alt="WhatsApp")
+              
+
+      button.header-btn.btn.btn-green(data-modal-open="form-request") Оставить заявку
+    

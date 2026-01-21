@@ -1,0 +1,62 @@
+@use "../parts/variables" as v;
+
+.body-404 {
+  padding-top: 0;
+
+  footer {
+    margin-top: 0;
+  }
+}
+
+.page-404 {
+  padding-top: 130px;
+  text-align: center;
+  background: center / cover no-repeat url(../img/bg-404.png);
+
+  @media (max-width: v.$screen-lg) {
+    background-image: url(../img/bg-404-mob.png);
+    padding-top: 72px;
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 538px;
+    min-height: 60svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: v.$screen-lg) {
+      min-height: 70svh;
+    }
+
+    @media (max-width: v.$screen-lg) {
+      max-width: 300px;
+    }
+  }
+
+  &__title {
+    font-size: 128px;
+    font-weight: bold;
+    color: var(--app-green-dark);
+    line-height: 100%;
+
+    @media (max-width: v.$screen-md) {
+      font-size: 64px;
+    }
+  }
+
+  &__subtitle {
+    color: var(--app-black);
+    margin-bottom: 12px;
+
+    @media (max-width: v.$screen-lg) {
+      font-size: 64px;
+    }
+  }
+
+  &__btn {
+    margin-top: 43px;
+    border-radius: 30px;
+  }
+}

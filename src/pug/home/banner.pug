@@ -1,0 +1,35 @@
+mixin benefits()
+  .sec-banner__benefits
+    .sec-banner__benefit
+      .sec-banner__benefit-icon
+        img(src="./img/home-banner-icon-1.svg" alt="icon")
+      span Высокие медицинские стандарты
+    .sec-banner__benefit
+      .sec-banner__benefit-icon
+        img(src="./img/home-banner-icon-2.svg" alt="icon")
+      span Современные технологии и точная работа врачей
+    .sec-banner__benefit
+      .sec-banner__benefit-icon
+        img(src="./img/home-banner-icon-3.svg" alt="icon")
+      span Комфортное лечение без переплат
+
+
+section#banner.sec-banner.sec-p-y--bottom
+  .container 
+    .sec-banner__wrap
+      .d-none-min-tablet
+        +benefits()
+
+      .sec-banner__wrap-left
+        .sec-banner__title.h1 Стоматологические и оздоровительные туры в Китай
+        .sec-banner__text Лечение в клинике «Жуйкан» в Хэйхэ с полным сопровождением и без переплат вместе с туристическим агентством «ХЭНТУ»
+        button.btn.btn-green.w-100p(data-modal-open="form-request") Задать вопрос координатору
+
+
+      .sec-banner__wrap-right
+        .sec-banner__img
+          img(src="./img/home-banner.jpg" alt="banner")
+
+        .d-none-max-tablet
+          +benefits()
+

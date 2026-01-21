@@ -1,0 +1,68 @@
+@use "../parts/variables" as v;
+
+.sec-contacts {
+  &__content {
+    margin-top: 40px;
+    padding: 36px;
+    max-width: 636px;
+    background: var(--app-gray-bg);
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+
+    @media (max-width: v.$screen-md) {
+      padding: 36px 20px;
+    }
+
+    &-left {
+      max-width: 274px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 500;
+
+    @media (max-width: v.$screen-md) {
+      font-size: 14px;
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__socs {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+
+      &:hover {
+        img {
+          filter: brightness(1);
+        }
+      }
+
+      img {
+        width: 100%;
+        transition: all 0.2s ease;
+        filter: brightness(0);
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+section.sec-form.sec-p-y--bottom
+  .container
+    .sec-form__content
+      .sec-form__content-img.d-none-max-tablet
+        img(src="./img/form-doc.png", alt="")
+
+      .sec-form__title.h3 Получите бесплатную консультацию #[br.d-none-max-mob] от нашего специалиста
+
+      form.sec-form__form(data-form)
+        .sec-form__input
+          label Телефон
+          input(type="tel" placeholder="+7 (999) 111-22-33" data-imask data-form-phone)
+          .error Введите корректные данные
+        .sec-form__input
+          label Имя
+          input(type="text" placeholder="Введите ваше имя" data-form-name)
+          .error Введите корректные данные
+
+        button(type="submit" data-submit).btn.btn-white.w-100p.sec-form__submit Оставить заявку
+
+        .sec-form__checkbox.custom-checkbox
+          label
+            input(type="checkbox" data-form-checkbox)
+            .custom-checkbox__box
+          p 
+           |Нажимая на кнопку вы даёте согласие на обработку 
+           a(href="#") персональных данных
+           | и соглашаетесь с 
+           a(href="#") политикой конфиденциальности
+        

@@ -1,0 +1,25 @@
+@use "../parts/variables" as v;
+
+.sec-videos {
+  &__slider {
+    margin-top: 40px;
+    position: relative;
+
+    .swiper {
+      margin: 0 auto;
+      max-width: 1124px;
+      z-index: 3;
+
+      @media (max-width: v.$screen-md) {
+        max-width: 290px;
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: var(--app-border-radius);
+  }
+}

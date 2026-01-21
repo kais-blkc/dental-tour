@@ -1,0 +1,88 @@
+.modal-form-err.modal-wrapper(data-modal-block="form-err")
+  .modal-content
+    button.x-btn(
+      title="Close (Esc)",
+      type="button"
+      data-modal-close="form-err"
+    ) 
+      img(src="./img/x-icon.svg", alt="")
+
+    
+    .modal-content__main
+      h3.modal__title Что-то пошло не так...
+      p.modal__subtitle Не удалось отправить заявку. Пожалуйста, попробуйте #[br.d-none-max-mob] ещё раз или свяжитесь с нами напрямую
+      button.btn.btn-green.modal__btn(data-modal-close="form-err") Повторить отправку
+
+    .modal-content__footer
+      .header-contacts.d-none-max-tablet
+        .header-contacts__icon
+          img(src="./img/phone-icon.svg" alt="Телефон")
+        .header-contacts__content
+          span.header-contacts__label Наш телефон
+          a.header-contacts__link(href="tel:+78005553535") +7 (800) 555 35 35
+
+      .header-socs.d-none-max-tablet
+        span.header-socs__title Наши соцсети
+        .header-socs__list
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-vk.svg" alt="VK")
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-yt.svg" alt="YouTube")
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-tg.svg" alt="Telegram")
+          a.header-socs__link(href="#" target="_blank")
+            img.header-socs__icon(src="img/soc-wa.svg" alt="WhatsApp")
+
+.modal-form-success.modal-wrapper(data-modal-block="form-success")
+  .modal-content
+    button.x-btn(
+      title="Close (Esc)",
+      type="button"
+      data-modal-close="form-success"
+    ) 
+      img(src="./img/x-icon.svg", alt="")
+
+    
+    .modal-content__main
+      h3.modal__title Заявка отправлена!
+      p.modal__subtitle Спасибо! Мы получили ваши данные и свяжемся #[br] с вами в ближайжее время
+      button.btn.btn-green.modal__btn(data-modal-close="form-success") Вернуться на главную
+
+
+.modal-form-request.modal-wrapper(data-modal-block="form-request")
+  .modal-content
+    button.x-btn(
+      title="Close (Esc)",
+      type="button"
+      data-modal-close="form-request"
+    ) 
+      img(src="./img/x-icon.svg", alt="")
+
+    
+    .modal-content__main
+      h3.modal__title Получите персональную #[br] консультацию от нашего специалиста
+      p.modal__subtitle Оставьте контакты — мы свяжемся с вами и ответим на все вопросы
+
+      form.modal-form-request__form(data-form)
+        .sec-form__input
+          label Телефон
+          input(type="tel" placeholder="+7 (999) 111-22-33" data-imask data-form-phone)
+          .error Введите корректные данные
+        .sec-form__input
+          label Имя
+          input(type="text" placeholder="Введите ваше имя" data-form-name)
+          .error Введите корректные данные
+
+        button(type="submit" data-submit).btn.btn-green.w-100p.sec-form__submit Оставить заявку
+
+        .custom-checkbox
+          label
+            input(type="checkbox" data-form-checkbox)
+            .custom-checkbox__box
+          p 
+           |Нажимая на кнопку вы даёте согласие на обработку 
+           a(href="#") персональных данных
+           | и соглашаетесь с 
+           a(href="#") политикой конфиденциальности
+        
+

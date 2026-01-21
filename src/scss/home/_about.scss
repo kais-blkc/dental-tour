@@ -1,0 +1,52 @@
+@use "../parts/variables" as v;
+
+.sec-about {
+  &__content {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 48% 1fr;
+    align-items: center;
+    gap: 115px;
+
+    @media (max-width: v.$screen-lg) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      b {
+        font-weight: 500;
+      }
+    }
+
+    &-video {
+      border-radius: 24px;
+      overflow: hidden;
+      height: 260px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0px 5px 12px 0 rgba(0, 0, 0, 0.25);
+
+      @media (max-width: v.$screen-lg) {
+        height: 160px;
+      }
+
+      &:hover {
+        .video-circle {
+          transform: scale(1.1);
+        }
+      }
+
+      &-bg {
+        position: absolute;
+      }
+    }
+  }
+}

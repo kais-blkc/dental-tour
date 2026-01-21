@@ -1,0 +1,133 @@
+@use "../parts/variables" as v;
+
+.footer {
+  padding: 30px 0;
+  color: var(--app-white);
+  background: var(--app-green-dark);
+
+  @media (max-width: v.$screen-lg) {
+    padding-top: 38px;
+    padding-bottom: 46px;
+    margin-top: 40px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: v.$screen-lg) {
+      flex-direction: column;
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    @media (max-width: v.$screen-lg) {
+      gap: 12px;
+    }
+
+    img {
+      filter: brightness(100);
+      width: 80px;
+
+      @media (max-width: v.$screen-lg) {
+        width: 50px;
+      }
+    }
+
+    &-text {
+      padding-left: 25px;
+      display: flex;
+      align-items: center;
+      border-left: 1px solid var(--app-white);
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 120%;
+      height: 144px;
+
+      @media (max-width: v.$screen-lg) {
+        height: 76px;
+        font-size: 20px;
+        padding-left: 12px;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media (max-width: v.$screen-lg) {
+      margin-top: 55px;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 120%;
+
+    @media (max-width: v.$screen-md) {
+      font-size: 14px;
+    }
+  }
+
+  &__socs {
+    display: flex;
+    gap: 10px;
+
+    a {
+      display: flex;
+      width: 46px;
+      height: 46px;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      img {
+        filter: brightness(100);
+        width: 100%;
+      }
+    }
+  }
+
+  &__links-other {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: auto;
+
+    @media (max-width: v.$screen-lg) {
+      margin-top: 32px;
+      flex-direction: column;
+      font-size: 14px;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    a {
+      transition: opacity 0.2s ease;
+      border-bottom: 1px solid var(--app-white);
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+@use "../parts/variables" as v;
+
+.sec-form {
+  overflow: visible;
+  padding-top: 10px;
+  color: var(--app-white);
+
+  &__content {
+    padding: 36px;
+    border-radius: 30px;
+    background: var(--app-green);
+    position: relative;
+    z-index: 3;
+
+    @media (max-width: v.$screen-lg) {
+      padding: 36px 20px;
+    }
+
+    &-img {
+      position: absolute;
+      bottom: 0;
+      right: -72px;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    color: var(--app-white);
+  }
+
+  form {
+    max-width: 68.5%;
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 1;
+
+    @media (max-width: v.$screen-lg) {
+      max-width: 100%;
+    }
+  }
+
+  &__input {
+    width: calc(50% - 3px);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media (max-width: v.$screen-lg) {
+      width: 100%;
+      margin-bottom: 22px;
+
+      &:nth-child(2) {
+        margin-bottom: 0;
+      }
+    }
+
+    label {
+      font-weight: 500;
+    }
+
+    input {
+      padding: 16px 30px;
+      border-radius: 30px;
+      color: var(--app-white);
+      border: 1px solid var(--app-white);
+      background: transparent;
+
+      &::placeholder {
+        color: var(--app-white);
+      }
+
+      &.is-error {
+        border-color: var(--app-red);
+        color: var(--app-red);
+
+        &::placeholder {
+          color: var(--app-red);
+        }
+
+        + .error {
+          display: block;
+        }
+      }
+    }
+
+    input + .error {
+      display: none;
+      padding-left: 30px;
+      color: var(--app-red);
+    }
+  }
+
+  &__submit {
+    border-radius: 30px;
+    margin-top: 32px;
+  }
+}
+
+.custom-checkbox {
+  --color: var(--app-white);
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+  font-size: 12px;
+
+  @media (max-width: v.$screen-md) {
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  input {
+    opacity: 0;
+    overflow: visible;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+  }
+
+  &__box {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      width: 13px;
+      height: 13px;
+      display: block;
+      background: var(--color);
+      transition: opacity 0.2s ease;
+      opacity: 0;
+    }
+  }
+
+  input:checked + .custom-checkbox__box::before {
+    opacity: 1;
+  }
+
+  input.is-error + .custom-checkbox__box {
+    border-color: var(--app-red);
+  }
+
+  a {
+    border-bottom: 1px solid var(---white);
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>InnoLevel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/fancybox.css"/>
+    <link rel="stylesheet" href="./css/style.css?v=1"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content"><a class="header-logo" href="/"><img src="./img/header-logo.svg" alt=""/></a>
+          <div class="header-navbar d-none-max-tablet"><a href="#banner">Главная</a><a href="#about">О нас</a><a href="#services">Прайс</a><a href="#qa">Вопросы</a><a href="#contacts">Контакты</a></div>
+          <div class="header-contacts d-none-max-tablet">
+            <div class="header-contacts__icon"><img src="./img/phone-icon.svg" alt="Телефон"/></div>
+            <div class="header-contacts__content"><span class="header-contacts__label">Наш телефон</span><a class="header-contacts__link" href="tel:+78005553535">+7 (800) 555 35 35</a></div>
+          </div>
+          <div class="header-socs d-none-max-tablet"><span class="header-socs__title">Наши соцсети</span>
+            <div class="header-socs__list"><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-vk.svg" alt="VK"/></a><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-yt.svg" alt="YouTube"/></a><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-tg.svg" alt="Telegram"/></a><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-wa.svg" alt="WhatsApp"/></a></div>
+          </div>
+          <button class="header-btn btn btn-green d-none-max-tablet" data-modal-open="form-request">Оставить заявку</button>
+          <div class="header-burger d-none-min-tablet" data-modal-open="header-mobile"><img src="./img/burger-menu.svg" alt=""/></div>
+        </div>
+      </div>
+      <div class="header-mobile" data-modal-block="header-mobile">
+        <div class="header-mobile__content">
+          <div class="header-mobile__close" data-modal-close="header-mobile"><img src="img/x-icon.svg" alt=""/></div>
+          <div class="header-navbar"><a href="#banner" data-modal-close="header-mobile">Главная</a><a href="#about" data-modal-close="header-mobile">О нас</a><a href="#services" data-modal-close="header-mobile">Прайс</a><a href="#qa" data-modal-close="header-mobile">Вопросы</a><a href="#contacts" data-modal-close="header-mobile">Контакты</a></div>
+          <div class="header-contacts">
+            <div class="header-contacts__icon"><img src="./img/phone-icon.svg" alt="Телефон"/></div>
+            <div class="header-contacts__content"><span class="header-contacts__label">Наш телефон</span><a class="header-contacts__link" href="tel:+78005553535">+7 (800) 555 35 35</a></div>
+          </div>
+          <div class="header-socs"><span class="header-socs__title">Наши соцсети</span>
+            <div class="header-socs__list"><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-vk.svg" alt="VK"/></a><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-yt.svg" alt="YouTube"/></a><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-tg.svg" alt="Telegram"/></a><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-wa.svg" alt="WhatsApp"/></a></div>
+          </div>
+          <button class="header-btn btn btn-green" data-modal-open="form-request">Оставить заявку</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="sec-banner sec-p-y--bottom" id="banner">
+        <div class="container"> 
+          <div class="sec-banner__wrap">
+            <div class="d-none-min-tablet">
+                    <div class="sec-banner__benefits">
+                      <div class="sec-banner__benefit">
+                        <div class="sec-banner__benefit-icon"><img src="./img/home-banner-icon-1.svg" alt="icon"/></div><span>Высокие медицинские стандарты</span>
+                      </div>
+                      <div class="sec-banner__benefit">
+                        <div class="sec-banner__benefit-icon"><img src="./img/home-banner-icon-2.svg" alt="icon"/></div><span>Современные технологии и точная работа врачей</span>
+                      </div>
+                      <div class="sec-banner__benefit">
+                        <div class="sec-banner__benefit-icon"><img src="./img/home-banner-icon-3.svg" alt="icon"/></div><span>Комфортное лечение без переплат</span>
+                      </div>
+                    </div>
+            </div>
+            <div class="sec-banner__wrap-left">
+              <div class="sec-banner__title h1">Стоматологические и оздоровительные туры в Китай</div>
+              <div class="sec-banner__text">Лечение в клинике «Жуйкан» в Хэйхэ с полным сопровождением и без переплат вместе с туристическим агентством «ХЭНТУ»</div>
+              <button class="btn btn-green w-100p" data-modal-open="form-request">Задать вопрос координатору</button>
+            </div>
+            <div class="sec-banner__wrap-right">
+              <div class="sec-banner__img"><img src="./img/home-banner.jpg" alt="banner"/></div>
+              <div class="d-none-max-tablet">
+                      <div class="sec-banner__benefits">
+                        <div class="sec-banner__benefit">
+                          <div class="sec-banner__benefit-icon"><img src="./img/home-banner-icon-1.svg" alt="icon"/></div><span>Высокие медицинские стандарты</span>
+                        </div>
+                        <div class="sec-banner__benefit">
+                          <div class="sec-banner__benefit-icon"><img src="./img/home-banner-icon-2.svg" alt="icon"/></div><span>Современные технологии и точная работа врачей</span>
+                        </div>
+                        <div class="sec-banner__benefit">
+                          <div class="sec-banner__benefit-icon"><img src="./img/home-banner-icon-3.svg" alt="icon"/></div><span>Комфортное лечение без переплат</span>
+                        </div>
+                      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-about sec-p-y" id="about">
+        <div class="container"> 
+          <div class="sec-about__title h2">Агентство «ХЭНТУ» и клиника «Жуйкан»</div>
+          <div class="sec-about__subtitle h2-subtitle">Официальное сопровождение медицинских туров в Хэйхэ</div>
+          <div class="sec-about__content">
+            <div class="sec-about__content-text">
+              <p> <b>Туристическое агентство «ХЭНТУ» («Добрый путь») </b>— юридически зарегистрированная компания в городе Хэйхэ под руководством генерального директора Цуй Лэя (Алексей). Агентство является <b>официальным представителем многопрофильного медицинского центра «Жуйкан» </b>и имеет право сопровождать иностранных пациентов на лечение в клинику.</p>
+              <p> <b>Клиника «Жуйкан»</b>— один из крупнейших медицинских центров Хэйхэ. Клиника оснащена<b>современным диагностическим и стоматологическим оборудованием, </b>располагает собственными зуботехническими лабораториями в Хэйхэ и Харбине. Прием ведут врачи<b>высшей категории,</b>прошедшие обучение в ведущих медицинских вузах Китая и зарубежные стажировки.</p>
+              <p> <b>Мы полностью берем на себя организацию поездки.</b>Наша цель — сделать медицинскую поездку в Китай простой, безопасной и прозрачной. Пациенты оплачивают только лечение в клинике, все основные<b>организационные услуги предоставляются бесплатно.</b></p>
+            </div><a class="sec-about__content-video img-cover" href="https://www.youtube.com/watch?v=ZR-HcXLRDHw" data-fancybox="data-fancybox"><img class="sec-about__content-video-bg" src="./img/about-video-bg.jpg" alt=""/>
+              <div class="video-circle"><img class="video-circle__bg" src="./img/play-bg.svg" alt=""/><img class="video-circle__icon" src="./img/play.svg" alt=""/></div></a>
+          </div>
+        </div>
+      </section>
+      <section class="sec-all-need sec-p-y">
+        <div class="container"> 
+          <div class="sec-all-need__content">
+            <div class="sec-all-need__content-left">
+              <div class="sec-all-need__slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide img-cover"><img src="./img/all-need-1.jpg" alt=""/></div>
+                    <div class="swiper-slide img-cover"><img src="./img/all-need-1.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="sec-all-need__slider-nav">
+                  <div class="slider-button-prev"></div>
+                  <div class="slider-button-next"></div>
+                </div>
+              </div>
+            </div>
+            <div class="sec-all-need__content-right">
+              <div class="sec-all-need__tags">
+                <div class="sec-all-need__tags-title">Все необходимое для лечения уже включено!</div>
+                <div class="sec-all-need__tags-list"><span>куратор в клинике</span><span>координатор-переводчик в Благовещенске</span><span>трансферы в Благовещенске и Хэйхэ</span><span>помощь с таможней и электронной декларацией КНР</span><span>билет на переправу в Хэйхэ</span><span>проживание в гостинице с завтраками (на время лечения)</span><span>обеды в клинике</span><span>сопровождение куратором</span><span>финальный ужин в ресторане</span><span>экскурсии по Хэйхэ (по желанию)</span><span>сопровождение в Хэйхэ (по запросу)</span><span>для групп от 5 человек сопровождение гидом в Хэйхэ</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-services sec-p-y" id="services">
+        <div class="container"> 
+          <div class="h2">Услуги клиники</div>
+          <div class="sec-services__tabs" data-tabs="data-tabs">
+            <div class="sec-services__tabs-nav">
+                    <button class="btn btn-green btn-tab is-active" data-tab-btn="data-tab-btn" data-target="tab-1">Стоматология. Ортопедическое лечение</button>
+                    <button class="btn btn-green btn-tab" data-tab-btn="data-tab-btn" data-target="tab-2">Протезирование</button>
+                    <button class="btn btn-green btn-tab" data-tab-btn="data-tab-btn" data-target="tab-3">Имплантация</button>
+                    <button class="btn btn-green btn-tab" data-tab-btn="data-tab-btn" data-target="tab-4">Терапия и традиционная китайская медицина</button>
+            </div>
+            <div class="tabs__content" data-tabs-content="data-tabs-content">
+              <div class="is-active" data-tab-pane="data-tab-pane" id="tab-1">
+                <div class="sec-services__item">
+                  <div class="sec-services__item-wrap">
+                    <div class="sec-services__item-slider"> 
+                      <div class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="sec-services__item-slider-nav">
+                        <div class="slider-button-prev"></div>
+                        <div class="slider-button-next"></div>
+                      </div>
+                    </div>
+                    <div class="sec-services__item-content">
+                      <div class="sec-services__item-title">Стоматология. Ортопедическое лечение </div>
+                      <div class="sec-services__item-list">
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка <br/> на основе титана (пр-во Китай)</p><span>5 600 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка на основе титана (пр-во Япония)</p><span>6 800 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка на основе титана (пр-во Германия)</p><span>8 500 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Коронка на основе диоксида циркония (пр-во Япония)</p><span>12 000 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Коронка на основе диоксида циркония (пр-во Германия)</p><span>15 000 ₽</span>
+                        </div>
+                      </div>
+                      <button class="btn btn-green w-100p" data-modal-open="form-request">Рассчитать стоимость</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-tab-pane="data-tab-pane" id="tab-2">
+                <div class="sec-services__item">
+                  <div class="sec-services__item-wrap">
+                    <div class="sec-services__item-slider"> 
+                      <div class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="sec-services__item-slider-nav">
+                        <div class="slider-button-prev"></div>
+                        <div class="slider-button-next"></div>
+                      </div>
+                    </div>
+                    <div class="sec-services__item-content">
+                      <div class="sec-services__item-title">Стоматология. Ортопедическое лечение </div>
+                      <div class="sec-services__item-list">
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка <br/> на основе титана (пр-во Китай)</p><span>5 600 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка на основе титана (пр-во Япония)</p><span>6 800 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка на основе титана (пр-во Германия)</p><span>8 500 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Коронка на основе диоксида циркония (пр-во Япония)</p><span>12 000 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Коронка на основе диоксида циркония (пр-во Германия)</p><span>15 000 ₽</span>
+                        </div>
+                      </div>
+                      <button class="btn btn-green w-100p" data-modal-open="form-request">Рассчитать стоимость</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-tab-pane="data-tab-pane" id="tab-3">
+                <div class="sec-services__item">
+                  <div class="sec-services__item-wrap">
+                    <div class="sec-services__item-slider"> 
+                      <div class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="sec-services__item-slider-nav">
+                        <div class="slider-button-prev"></div>
+                        <div class="slider-button-next"></div>
+                      </div>
+                    </div>
+                    <div class="sec-services__item-content">
+                      <div class="sec-services__item-title">Стоматология. Ортопедическое лечение </div>
+                      <div class="sec-services__item-list">
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка <br/> на основе титана (пр-во Китай)</p><span>5 600 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка на основе титана (пр-во Япония)</p><span>6 800 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка на основе титана (пр-во Германия)</p><span>8 500 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Коронка на основе диоксида циркония (пр-во Япония)</p><span>12 000 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Коронка на основе диоксида циркония (пр-во Германия)</p><span>15 000 ₽</span>
+                        </div>
+                      </div>
+                      <button class="btn btn-green w-100p" data-modal-open="form-request">Рассчитать стоимость</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-tab-pane="data-tab-pane" id="tab-4">
+                <div class="sec-services__item">
+                  <div class="sec-services__item-wrap">
+                    <div class="sec-services__item-slider"> 
+                      <div class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                          <div class="swiper-slide"><img src="./img/services-1.jpg"/></div>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="sec-services__item-slider-nav">
+                        <div class="slider-button-prev"></div>
+                        <div class="slider-button-next"></div>
+                      </div>
+                    </div>
+                    <div class="sec-services__item-content">
+                      <div class="sec-services__item-title">Стоматология. Ортопедическое лечение </div>
+                      <div class="sec-services__item-list">
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка <br/> на основе титана (пр-во Китай)</p><span>5 600 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка на основе титана (пр-во Япония)</p><span>6 800 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Металлокерамическая коронка на основе титана (пр-во Германия)</p><span>8 500 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Коронка на основе диоксида циркония (пр-во Япония)</p><span>12 000 ₽</span>
+                        </div>
+                        <div class="sec-services__item-list-item">
+                          <p>Коронка на основе диоксида циркония (пр-во Германия)</p><span>15 000 ₽</span>
+                        </div>
+                      </div>
+                      <button class="btn btn-green w-100p" data-modal-open="form-request">Рассчитать стоимость</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-qa sec-p-y" id="qa">
+        <div class="container"> 
+          <div class="h2">Часто задаваемые вопросы</div>
+          <div class="h2-subtitle">Коротко и по делу — без сюрпризов</div>
+          <div class="sec-qa__list">
+            <div class="sec-qa__accordion accordion" data-accordion="data-accordion">
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Кто Вы? С кем я имею дело?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Мы — официальные представители стоматологической клиники в Хэйхэ. Вы общаетесь с координаторами, которые помогают организовать Вашу поездку от консультации до возвращения домой.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>С кем я переписываюсь? С доктором?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Вы переписываетесь с медицинским координатором. Он собирает анамнез и передает данные врачам для составления предварительного плана лечения. Прямая связь с врачом происходит на этапе очного осмотра.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Что от меня требуется, чтобы узнать стоимость стоматологического лечения?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Для предварительного расчета стоимости необходимо прислать панорамный снимок зубов (ОПТГ) или данные КТ-обследования, а также описать Ваши пожелания.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Это окончательная цена?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Дистанционный расчет является предварительным. Окончательная стоимость утверждается после очного осмотра и составления детального плана лечения в клинике.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Какой снимок и куда присылать?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Нужен панорамный снимок (ОПТГ). Присылайте его нам в WhatsApp, Telegram или на электронную почту в хорошем качестве.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Как вообще все происходит? (Процесс записи в клинику на стоматологическое лечение, приезд, встречи)</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Вы согласовываете дату, мы бронируем место. По приезду в Благовещенск Вас встречает наш представитель, сопровождает на таможню, а в Хэйхэ Вас встречает гид и отвозит в клинику.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Как проходить таможню? Первый раз еду в Китай, волнуюсь.</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Не волнуйтесь, процедура стандартная. Наш представитель проинструктирует Вас в Благовещенске. Понадобится только загранпаспорт. Для лечения зубов в Хэйхэ действует упрощенный визовый режим.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Какие услуги мне предоставляют в рамках поездки?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Встреча в Благовещенске, сопровождение, трансфер в Хэйхэ, проживание в гостинице при клинике, услуги переводчика и первичная диагностика.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Как происходит оплата в клинике?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Оплата производится после заключения договора и осмотра. Вы платите непосредственно в кассу клиники.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Возможна ли оплата в иностранной валюте?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>В клинике принимаются юани. Также часто возможна оплата рублями по актуальному курсу через современные платежные системы.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Нужно ли мне менять рубли на юани заранее?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Заранее менять всю сумму не обязательно. Вы можете сделать это в Благовещенске или непосредственно в Хэйхэ с помощью нашего гида.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Возможна ли оплата частями?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Обычно оплата производится в два этапа: аванс после начала работ и полный расчет по завершении лечения перед отъездом.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Можно ли взять с собой сопровождающего?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Да, Вы можете взять сопровождающего. Условия его проживания (бесплатно или с доплатой) зависят от выбранного пакета услуг и объема Вашего лечения.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Какие могут быть дополнительные расходы?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Дополнительно оплачиваются личные покупки, питание вне клиники, экскурсии и таможенные сборы (если они не входят в акцию).</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Что с питанием? Будут ли меня кормить?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>В зависимости от выбранного плана проживания, клиника может предоставлять завтраки. В Хэйхэ много доступных кафе с русской и китайской кухней.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Как работает таможня? Можно в любое время пересекать границу?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Таможня работает по расписанию (обычно с 09:00 до 17:30). Пересечение границы возможно только в рабочие часы.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>В каком случае бесплатные услуги мне недоступны?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Бесплатное проживание и трансфер обычно предоставляются при сумме лечения выше определенного порога (уточняйте у координатора).</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Есть ли скидки для группы?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Да, при заезде группы от 2-3 человек возможны индивидуальные условия или дополнительные скидки на определенные виды услуг.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Хорошие ли у Вас специалисты?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>В нашей клинике работают врачи высшей категории с многолетним опытом работы, прошедшие сертификацию для работы с иностранными пациентами.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Если я приеду в клинику самостоятельно, обойдется ли мне это дешевле?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Нет, цена в клинике фиксированная. Напротив, самостоятельно Вы можете потратить больше на такси, переводчиков и гостиницу, которые для наших клиентов бесплатны.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Что еще нужно знать до поездки в Китай?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Проверьте срок действия загранпаспорта и отсутствие задолженностей у судебных приставов, которые могут ограничить выезд из РФ.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Почему у клиники столько контактов в Интернете, какой из них официальный?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>У клиники есть несколько отделов по работе с СНГ. Все контакты, указанные на наших официальных лендингах, являются рабочими и ведут к сертифицированным координаторам.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Я кому-то уже писал по другому номеру, он меня встречает. Это Ваш представитель?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Если Вы договаривались через наш официальный сайт, то это наш сотрудник. Уточните имя и телефон Вашего координатора для проверки.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__item" data-accordion-item="data-accordion-item">
+                <div class="accordion__header" data-accordion-control="data-accordion-control"><span>Чем заняться в Хэйхэ в свободное время?</span></div>
+                <div class="accordion__content" data-accordion-content="data-accordion-content">
+                  <div class="accordion__inner">
+                    <p>Вы можете посетить торговые центры, утренний рынок, набережную Амура или местные парки. Гид всегда подскажет интересные места.</p>
+                    <button class="btn btn-green w-100p" data-modal-open="form-request">Получить консультацию</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-portfolio sec-p-y">
+        <div class="container"> 
+          <div class="h2">Фотогалерея до/после</div>
+          <div class="h2-subtitle">Реальные результаты и пациенты</div>
+          <div class="sec-portfolio__slider">
+            <div class="swiper"> 
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/services-1.jpg" alt=""/></div>
+                <div class="swiper-slide"><img src="./img/services-1.jpg" alt=""/></div>
+                <div class="swiper-slide"><img src="./img/services-1.jpg" alt=""/></div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="slider-nav">
+              <div class="slider-button-prev"></div>
+              <div class="slider-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-videos sec-p-y">
+        <div class="container"> 
+          <div class="h2">Видео пациентов и клиники</div>
+          <div class="h2-subtitle">Видеоотзывы и процесс лечения</div>
+          <div class="sec-videos__slider">
+            <div class="swiper"> 
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><a class="sec-videos__item video-play-icon img-cover" href="https://www.youtube.com/watch?v=ZR-HcXLRDHw" data-fancybox="data-fancybox"><img src="./img/about-video-bg.jpg" alt=""/></a></div>
+                <div class="swiper-slide"><a class="sec-videos__item video-play-icon img-cover" href="https://www.youtube.com/watch?v=ZR-HcXLRDHw" data-fancybox="data-fancybox"><img src="./img/about-video-bg.jpg" alt=""/></a></div>
+                <div class="swiper-slide"><a class="sec-videos__item video-play-icon img-cover" href="https://www.youtube.com/watch?v=ZR-HcXLRDHw" data-fancybox="data-fancybox"><img src="./img/about-video-bg.jpg" alt=""/></a></div>
+                <div class="swiper-slide"><a class="sec-videos__item video-play-icon img-cover" href="https://www.youtube.com/watch?v=ZR-HcXLRDHw" data-fancybox="data-fancybox"><img src="./img/about-video-bg.jpg" alt=""/></a></div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-nav-center --with-dots">
+              <div class="slider-button-prev"></div>
+              <div class="slider-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-contacts sec-p-y--top" id="contacts">
+        <div class="container"> 
+          <div class="h2">Контакты</div>
+          <div class="h2-subtitle">Если вы хотите узнать стоимость лечения, сроки поездки или задать <br class="d-none-max-mob"/> любой вопрос <br class="d-none-min-mob"/> — свяжитесь с нашим координатором.</div>
+          <div class="sec-contacts__content">
+            <div class="sec-contacts__content-left">
+              <div class="sec-contacts__links"><a href="tel:+79145380606">+7 (914) 538-06-06</a><a href="mailto:stomat@mail.ru">Stomat@mail.ru</a>
+                <p>г. Москва, ул. Кирова 44</p>
+              </div>
+            </div>
+            <div class="sec-contacts__content-right">
+              <div class="sec-contacts__socs"><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-vk.svg" alt="VK"/></a><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-yt.svg" alt="YouTube"/></a><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-tg.svg" alt="Telegram"/></a><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-wa.svg" alt="WhatsApp"/></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-form sec-p-y--bottom">
+        <div class="container">
+          <div class="sec-form__content">
+            <div class="sec-form__content-img d-none-max-tablet"><img src="./img/form-doc.png" alt=""/></div>
+            <div class="sec-form__title h3">Получите бесплатную консультацию <br class="d-none-max-mob"/> от нашего специалиста</div>
+            <form class="sec-form__form" data-form="data-form">
+              <div class="sec-form__input">
+                <label>Телефон</label>
+                <input type="tel" placeholder="+7 (999) 111-22-33" data-imask="data-imask" data-form-phone="data-form-phone"/>
+                <div class="error">Введите корректные данные</div>
+              </div>
+              <div class="sec-form__input">
+                <label>Имя</label>
+                <input type="text" placeholder="Введите ваше имя" data-form-name="data-form-name"/>
+                <div class="error">Введите корректные данные</div>
+              </div>
+              <button class="btn btn-white w-100p sec-form__submit" type="submit" data-submit="data-submit">Оставить заявку</button>
+              <div class="sec-form__checkbox custom-checkbox">
+                <label>
+                  <input type="checkbox" data-form-checkbox="data-form-checkbox"/>
+                  <div class="custom-checkbox__box"></div>
+                </label>
+                <p>
+                   Нажимая на кнопку вы даёте согласие на обработку <a href="#">персональных данных</a> и соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="footer__content">
+          <div class="footer__logo"><img src="./img/header-logo.svg" alt="logo"/>
+            <div class="footer__logo-text">Стоматологические <br/> и оздоровительные туры <br/> в Китай</div>
+          </div>
+          <div class="footer__content-right">
+            <div class="footer__contacts">
+              <div class="footer__links"><a href="tel:+79145380606">+7 (914) 538-06-06</a><a href="mailto:stomat@mail.ru">Stomat@mail.ru</a>
+                <p>г. Москва, ул. Кирова 44</p>
+              </div>
+              <div class="footer__socs"><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-vk.svg" alt="VK"/></a><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-yt.svg" alt="YouTube"/></a><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-tg.svg" alt="Telegram"/></a><a href="#" target="_blank"><img class="header-socs__icon" src="img/soc-wa.svg" alt="WhatsApp"/></a></div>
+            </div>
+            <div class="footer__links-other"><a href="#">Лицензия</a><a href="#">Политика конфиденциальности</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-form-err modal-wrapper" data-modal-block="form-err">
+      <div class="modal-content">
+        <button class="x-btn" title="Close (Esc)" type="button" data-modal-close="form-err"> <img src="./img/x-icon.svg" alt=""/></button>
+        <div class="modal-content__main">
+          <h3 class="modal__title">Что-то пошло не так...</h3>
+          <p class="modal__subtitle">Не удалось отправить заявку. Пожалуйста, попробуйте <br class="d-none-max-mob"/> ещё раз или свяжитесь с нами напрямую</p>
+          <button class="btn btn-green modal__btn" data-modal-close="form-err">Повторить отправку</button>
+        </div>
+        <div class="modal-content__footer">
+          <div class="header-contacts d-none-max-tablet">
+            <div class="header-contacts__icon"><img src="./img/phone-icon.svg" alt="Телефон"/></div>
+            <div class="header-contacts__content"><span class="header-contacts__label">Наш телефон</span><a class="header-contacts__link" href="tel:+78005553535">+7 (800) 555 35 35</a></div>
+          </div>
+          <div class="header-socs d-none-max-tablet"><span class="header-socs__title">Наши соцсети</span>
+            <div class="header-socs__list"><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-vk.svg" alt="VK"/></a><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-yt.svg" alt="YouTube"/></a><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-tg.svg" alt="Telegram"/></a><a class="header-socs__link" href="#" target="_blank"><img class="header-socs__icon" src="img/soc-wa.svg" alt="WhatsApp"/></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-form-success modal-wrapper" data-modal-block="form-success">
+      <div class="modal-content">
+        <button class="x-btn" title="Close (Esc)" type="button" data-modal-close="form-success"> <img src="./img/x-icon.svg" alt=""/></button>
+        <div class="modal-content__main">
+          <h3 class="modal__title">Заявка отправлена!</h3>
+          <p class="modal__subtitle">Спасибо! Мы получили ваши данные и свяжемся <br/> с вами в ближайжее время</p>
+          <button class="btn btn-green modal__btn" data-modal-close="form-success">Вернуться на главную</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-form-request modal-wrapper" data-modal-block="form-request">
+      <div class="modal-content">
+        <button class="x-btn" title="Close (Esc)" type="button" data-modal-close="form-request"> <img src="./img/x-icon.svg" alt=""/></button>
+        <div class="modal-content__main">
+          <h3 class="modal__title">Получите персональную <br/> консультацию от нашего специалиста</h3>
+          <p class="modal__subtitle">Оставьте контакты — мы свяжемся с вами и ответим на все вопросы</p>
+          <form class="modal-form-request__form" data-form="data-form">
+            <div class="sec-form__input">
+              <label>Телефон</label>
+              <input type="tel" placeholder="+7 (999) 111-22-33" data-imask="data-imask" data-form-phone="data-form-phone"/>
+              <div class="error">Введите корректные данные</div>
+            </div>
+            <div class="sec-form__input">
+              <label>Имя</label>
+              <input type="text" placeholder="Введите ваше имя" data-form-name="data-form-name"/>
+              <div class="error">Введите корректные данные</div>
+            </div>
+            <button class="btn btn-green w-100p sec-form__submit" type="submit" data-submit="data-submit">Оставить заявку</button>
+            <div class="custom-checkbox">
+              <label>
+                <input type="checkbox" data-form-checkbox="data-form-checkbox"/>
+                <div class="custom-checkbox__box"></div>
+              </label>
+              <p>
+                 Нажимая на кнопку вы даёте согласие на обработку <a href="#">персональных данных</a> и соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/fancybox.umd.js"></script>
+    <script src="./js/imask.js"></script>
+    <script src="./js/main.js?v=1"></script>
+  </body>
+</html>

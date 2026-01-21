@@ -1,0 +1,85 @@
+@use "variables" as v;
+
+$font-main: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$breakpoint-desktop: 1300px;
+$breakpoint-mobile: 360px;
+
+body {
+  font-family: $font-main;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin text-style($size, $lh, $weight) {
+  font-size: $size;
+  line-height: if($lh == "auto", normal, $lh);
+  font-weight: $weight;
+}
+
+.h1 {
+  color: var(--app-green-dark);
+  @include text-style(30px, 100%, 500);
+
+  @media (min-width: $breakpoint-desktop) {
+    @include text-style(40px, 100%, 500);
+  }
+}
+
+.h2 {
+  color: var(--app-green-dark);
+  @include text-style(26px, auto, 500);
+
+  @media (min-width: $breakpoint-desktop) {
+    @include text-style(40px, auto, 500);
+  }
+}
+
+.h3 {
+  color: var(--app-green-dark);
+  @include text-style(32px, auto, 500);
+
+  @media (max-width: v.$screen-md) {
+    @include text-style(22px, auto, 500);
+  }
+}
+
+.h4 {
+  @include text-style(20px, auto, 500);
+
+  @media (min-width: $breakpoint-desktop) {
+    @include text-style(24px, 28px, 500);
+  }
+}
+
+.text-bold-20 {
+  @include text-style(18px, auto, 700); // Mob Bold 18
+
+  @media (min-width: $breakpoint-desktop) {
+    @include text-style(20px, auto, 700);
+  }
+}
+
+.text-18-medium {
+  @include text-style(18px, "auto", 500); // Mob Medium 16
+
+  @media (min-width: $breakpoint-desktop) {
+    @include text-style(16px, "auto", 500);
+  }
+}
+
+.text-regular-16 {
+  @include text-style(14px, 16px, 400); // Mob Regular 14
+
+  @media (min-width: $breakpoint-desktop) {
+    @include text-style(16px, 20px, 400);
+  }
+}
+
+.h2-subtitle {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+
+  @media (max-width: v.$screen-md) {
+    font-size: 16px;
+  }
+}

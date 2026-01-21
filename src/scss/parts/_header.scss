@@ -1,0 +1,181 @@
+@use "variables" as v;
+@use "typography" as t;
+
+.header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+  &.scroll {
+    .header-content {
+      padding: 8px 20px;
+
+      @media (max-width: v.$screen-lg) {
+        padding: 8px 12px;
+      }
+    }
+  }
+}
+
+.header-logo {
+  width: 60px;
+
+  @media (max-width: v.$screen-lg) {
+    width: 40px;
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 20px;
+  background: var(--app-gray-bg);
+  border-radius: 0 0 20px 20px;
+  transition: all 0.2s ease;
+
+  @media (max-width: v.$screen-lg) {
+    flex-direction: row-reverse;
+    padding: 16px 12px;
+    background: var(--app-white);
+  }
+}
+
+.header-navbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: 1200px) {
+    gap: 10px;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__label {
+    color: var(--app-green-text);
+    font-size: 12px;
+  }
+
+  &__link {
+    color: var(--app-black);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.header-socs {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 12px;
+    color: var(--app-green-text);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__link {
+    display: flex;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 32px;
+    object-fit: contain;
+  }
+}
+
+.header-burger {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-mobile {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: var(--app-white);
+  opacity: 0;
+  visibility: hidden;
+  left: -100px;
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-navbar {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .header-contacts {
+    margin-top: auto;
+    margin-bottom: 40px;
+  }
+
+  .header-btn {
+    margin-top: 40px;
+    width: 100%;
+  }
+}
